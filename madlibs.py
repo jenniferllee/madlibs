@@ -57,7 +57,7 @@ def show_madlib():
     color = request.args.get("color")
     noun = request.args.get("noun")
     person = request.args.get("name")
-    adjective = request.args.get("adjective")
+    adjective = request.args.getlist("adjective")
 
     return render_template("madlib.html",
                            color=color,
